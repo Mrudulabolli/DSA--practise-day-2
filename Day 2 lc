@@ -1,0 +1,28 @@
+public class Main {
+	public static void main(String[] args) {
+		int n=2;
+		int x=2;
+		long N=n;
+		double result;
+		if(N>0){
+			result=power(x,N);
+		}else{
+		result= 1/power(x,-N);
+		}
+		
+	}
+	
+	public static double power(double x,long n){
+		if(n==0){
+			return 1;
+		}
+		double half=power(x,n/2);
+		if(n%2==0){
+			return half*half;
+		}
+		else{
+			return x*half*half;
+		}
+		
+	}
+}
